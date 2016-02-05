@@ -18,33 +18,22 @@ var scenes;
             // add Intro Image
             this._introImage = new createjs.Bitmap("../../Assets/images/castle.png");
             this.addChild(this._introImage);
-            // add the Yes button to the MENU scene
-            this._yes = new objects.Button("yes", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
-            this.addChild(this._yes);
-            // Yes Button event listener
-            this._yes.on("click", this._yesClick, this);
-            // add the No button to the MENU scene
-            this._no = new objects.Button("no", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
-            this.addChild(this._no);
-            // No Button event listener
-            this._no.on("click", this._noClick, this);
+            // add the Start button to the Intro scene
+            this._start = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this.addChild(this._start);
+            // START_OVER Button event listener
+            this._start.on("click", this._startButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
-        // INTRO Scene updates here
+        // PLAY Scene updates here
         Intro.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // LEFT_CAVE Button click event handler
-        Intro.prototype._yesClick = function (event) {
-            // Switch to the LEFT_CAVE Scene
+        // START_OVER Button click event handler
+        Intro.prototype._startButtonClick = function (event) {
+            // Switch to the INTRO Scene
             scene = config.Scene.FOREST;
-            changeScene();
-        };
-        // LEFT_CAVE Button click event handler
-        Intro.prototype._noClick = function (event) {
-            // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.MEETING;
             changeScene();
         };
         return Intro;

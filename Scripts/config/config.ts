@@ -16,6 +16,7 @@
         public static SPACESHIP: number = 12;
         public static HAPPYEND: number = 13;
         public static DISEASE: number = 14;
+        public static CREATURES:number=15;
     }
     
     

@@ -3,7 +3,8 @@ module scenes {
     export class Sword extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
          private _swordImage: createjs.Bitmap;
-        private _startOverButton: createjs.Bitmap;
+        private _yes: createjs.Bitmap;
+        private _no: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -17,23 +18,31 @@ module scenes {
             // add Forest Image
             this._swordImage = new createjs.Bitmap("../../Assets/images/sword.png");
             this.addChild(this._swordImage);
-
-           // add the BACK button to the OVER scene
-            this._startOverButton = new objects.Button(
-                "StartOverButton",
-                config.Screen.CENTER_X,
+       // add the Yes button to the MENU scene
+            this._yes = new objects.Button(
+                "yes",
+                config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
-            this.addChild(this._startOverButton);
-           
-            // START_OVER Button event listener
-            this._startOverButton.on("click", this._startOverButtonClick, this);
-
-
+            this.addChild(this._yes);
+            
+            // Yes Button event listener
+            this._yes.on("click", this._yesClick, this);
+            
+            // add the No button to the MENU scene
+            this._no = new objects.Button(
+                "no",
+                config.Screen.CENTER_X + 100,
+                config.Screen.CENTER_Y + 180);
+            this.addChild(this._no);
+            
+            // No Button event listener
+            this._no.on("click", this._noClick, this);
+            
             // add this scene to the global stage container
             stage.addChild(this);
         }
 
-        // PLAY Scene updates here
+        // INTRO Scene updates here
         public update(): void {
 
         }
@@ -41,10 +50,17 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // START_OVER Button click event handler
-        private _startOverButtonClick(event: createjs.MouseEvent) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+        // LEFT_CAVE Button click event handler
+        private _yesClick(event: createjs.MouseEvent) {
+            // Switch to the SWORD Scene
+            scene = config.Scene.CREATURES;
+            changeScene();
+        }
+        
+        // LEFT_CAVE Button click event handler
+        private _noClick(event: createjs.MouseEvent) {
+            // Switch to the FIRE Scene
+            scene = config.Scene.FIRE;
             changeScene();
         }
     }

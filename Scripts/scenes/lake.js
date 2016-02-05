@@ -44,7 +44,7 @@ var scenes;
         // LEFT_CAVE Button click event handler
         Lake.prototype._noClick = function (event) {
             // Switch to the FIRE Scene
-            scene = config.Scene.MEETING;
+            scene = config.Scene.HOUSE;
             changeScene();
         };
         return Lake;

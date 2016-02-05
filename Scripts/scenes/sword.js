@@ -18,22 +18,33 @@ var scenes;
             // add Forest Image
             this._swordImage = new createjs.Bitmap("../../Assets/images/sword.png");
             this.addChild(this._swordImage);
-            // add the BACK button to the OVER scene
-            this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
-            this.addChild(this._startOverButton);
-            // START_OVER Button event listener
-            this._startOverButton.on("click", this._startOverButtonClick, this);
+            // add the Yes button to the MENU scene
+            this._yes = new objects.Button("yes", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
+            this.addChild(this._yes);
+            // Yes Button event listener
+            this._yes.on("click", this._yesClick, this);
+            // add the No button to the MENU scene
+            this._no = new objects.Button("no", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
+            this.addChild(this._no);
+            // No Button event listener
+            this._no.on("click", this._noClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
-        // PLAY Scene updates here
+        // INTRO Scene updates here
         Sword.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // START_OVER Button click event handler
-        Sword.prototype._startOverButtonClick = function (event) {
-            // Switch to the INTRO Scene
-            scene = config.Scene.INTRO;
+        // LEFT_CAVE Button click event handler
+        Sword.prototype._yesClick = function (event) {
+            // Switch to the SWORD Scene
+            scene = config.Scene.CREATURES;
+            changeScene();
+        };
+        // LEFT_CAVE Button click event handler
+        Sword.prototype._noClick = function (event) {
+            // Switch to the FIRE Scene
+            scene = config.Scene.FIRE;
             changeScene();
         };
         return Sword;

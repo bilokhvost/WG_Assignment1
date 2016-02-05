@@ -12,6 +12,7 @@ var meeting;
 var lake;
 var house;
 var sword;
+var creatures;
 var fire;
 var beauty;
 var witch;
@@ -103,6 +104,13 @@ function changeScene() {
             sword = new scenes.Sword();
             currentScene = sword;
             console.log("Starting sword Scene");
+            break;
+        case config.Scene.CREATURES:
+            // show the game FIRE scene
+            stage.removeAllChildren();
+            creatures = new scenes.Creatures();
+            currentScene = creatures;
+            console.log("Starting creatures Scene");
             break;
         case config.Scene.FIRE:
             // show the game FIRE scene

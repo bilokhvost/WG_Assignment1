@@ -12,6 +12,7 @@
 ///<reference path="../scenes/lake.ts" />
 ///<reference path="../scenes/house.ts" />
 ///<reference path="../scenes/sword.ts" />
+///<reference path="../scenes/creatures.ts" />
 ///<reference path="../scenes/fire.ts" />
 ///<reference path="../scenes/beauty.ts" />
 ///<reference path="../scenes/witch.ts" />

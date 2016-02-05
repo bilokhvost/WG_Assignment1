@@ -44,7 +44,7 @@ var scenes;
         // LEFT_CAVE Button click event handler
         Forest.prototype._noClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.HOUSE;
+            scene = config.Scene.MEETING;
             changeScene();
         };
         return Forest;

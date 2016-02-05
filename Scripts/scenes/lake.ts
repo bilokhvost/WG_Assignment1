@@ -61,7 +61,7 @@ module scenes {
         // LEFT_CAVE Button click event handler
         private _noClick(event: createjs.MouseEvent) {
             // Switch to the FIRE Scene
-            scene = config.Scene.MEETING;
+            scene = config.Scene.HOUSE;
             changeScene();
         }
     }

@@ -1,9 +1,9 @@
-// INTRO SCENE
+// Creatures SCENE
 module scenes {
-    export class Intro extends objects.Scene {
+    export class Creatures extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _introImage: createjs.Bitmap;
-        private _start: objects.Button;
+         private _creaturesImage: createjs.Bitmap;
+        private _startOverButton: createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -14,19 +14,19 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add Intro Image
-            this._introImage = new createjs.Bitmap("../../Assets/images/castle.png");
-            this.addChild(this._introImage);
-            
-            // add the Start button to the Intro scene
-           this._start = new objects.Button(
-                "StartButton",
+            // add Forest Image
+            this._creaturesImage = new createjs.Bitmap("../../Assets/images/creatures.png");
+            this.addChild(this._creaturesImage);
+
+           // add the BACK button to the OVER scene
+            this._startOverButton = new objects.Button(
+                "StartOverButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 180);
-            this.addChild(this._start);
+            this.addChild(this._startOverButton);
            
             // START_OVER Button event listener
-            this._start.on("click", this._startButtonClick, this);
+            this._startOverButton.on("click", this._startOverButtonClick, this);
 
 
             // add this scene to the global stage container
@@ -42,9 +42,9 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         // START_OVER Button click event handler
-        private _startButtonClick(event: createjs.MouseEvent) {
+        private _startOverButtonClick(event: createjs.MouseEvent) {
             // Switch to the INTRO Scene
-            scene = config.Scene.FOREST;
+            scene = config.Scene.INTRO;
             changeScene();
         }
     }

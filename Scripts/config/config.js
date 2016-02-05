@@ -19,6 +19,7 @@ var config;
         Scene.SPACESHIP = 12;
         Scene.HAPPYEND = 13;
         Scene.DISEASE = 14;
+        Scene.CREATURES = 15;
         return Scene;
     })();
     config.Scene = Scene;
