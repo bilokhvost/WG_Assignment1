@@ -15,6 +15,10 @@ var sword;
 var fire;
 var beauty;
 var witch;
+var village;
+var easyHouse;
+var zombie;
+var spaceship;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -113,11 +117,39 @@ function changeScene() {
             console.log("Starting beauty Scene");
             break;
         case config.Scene.WITCH:
-            // show the game Beauty scene
+            // show the game Witch scene
             stage.removeAllChildren();
             witch = new scenes.Witch();
             currentScene = witch;
             console.log("Starting witch Scene");
+            break;
+        case config.Scene.VILLAGE:
+            // show the game Village scene
+            stage.removeAllChildren();
+            village = new scenes.Village();
+            currentScene = village;
+            console.log("Starting village Scene");
+            break;
+        case config.Scene.EASYHOUSE:
+            // show the game Easy House scene
+            stage.removeAllChildren();
+            easyHouse = new scenes.EasyHouse();
+            currentScene = easyHouse;
+            console.log("Starting Easy House Scene");
+            break;
+        case config.Scene.ZOMBIE:
+            // show the game Zombie scene
+            stage.removeAllChildren();
+            zombie = new scenes.Zombie();
+            currentScene = zombie;
+            console.log("Starting Zombie Scene");
+            break;
+        case config.Scene.SPACESHIP:
+            // show the game Spaceship scene
+            stage.removeAllChildren();
+            spaceship = new scenes.Spaceship();
+            currentScene = spaceship;
+            console.log("Starting Spaceship Scene");
             break;
     }
     console.log(currentScene.numChildren);

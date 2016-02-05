@@ -10,6 +10,12 @@
         public static FIRE: number = 6;
         public static BEAUTY: number = 7;
         public static WITCH: number = 8;
+        public static VILLAGE: number = 9;
+        public static EASYHOUSE: number = 10;
+        public static ZOMBIE: number = 11;
+        public static SPACESHIP: number = 12;
+        public static HAPPYEND: number = 13;
+        public static DISEASE: number = 14;
     }
     
     

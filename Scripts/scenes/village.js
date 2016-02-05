@@ -3,21 +3,21 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// MEETING SCENE
+// VILLAGE SCENE
 var scenes;
 (function (scenes) {
-    var Meeting = (function (_super) {
-        __extends(Meeting, _super);
+    var Village = (function (_super) {
+        __extends(Village, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Meeting() {
+        function Village() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Meeting.prototype.start = function () {
+        Village.prototype.start = function () {
             // add Intro Image
-            this._meetingImage = new createjs.Bitmap("../../Assets/images/meeting.png");
-            this.addChild(this._meetingImage);
+            this._villageImage = new createjs.Bitmap("../../Assets/images/village.png");
+            this.addChild(this._villageImage);
             // add the Yes button to the MENU scene
             this._yes = new objects.Button("yes", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._yes);
@@ -32,23 +32,23 @@ var scenes;
             stage.addChild(this);
         };
         // INTRO Scene updates here
-        Meeting.prototype.update = function () {
+        Village.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // LEFT_CAVE Button click event handler
-        Meeting.prototype._yesClick = function (event) {
+        Village.prototype._yesClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.VILLAGE;
+            scene = config.Scene.ZOMBIE;
             changeScene();
         };
         // LEFT_CAVE Button click event handler
-        Meeting.prototype._noClick = function (event) {
+        Village.prototype._noClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.EASYHOUSE;
+            scene = config.Scene.SPACESHIP;
             changeScene();
         };
-        return Meeting;
+        return Village;
     })(objects.Scene);
-    scenes.Meeting = Meeting;
+    scenes.Village = Village;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=meeting.js.map
+//# sourceMappingURL=village.js.map

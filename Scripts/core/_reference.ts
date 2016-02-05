@@ -15,3 +15,7 @@
 ///<reference path="../scenes/fire.ts" />
 ///<reference path="../scenes/beauty.ts" />
 ///<reference path="../scenes/witch.ts" />
+///<reference path="../scenes/village.ts" />
+///<reference path="../scenes/easyhouse.ts" />
+///<reference path="../scenes/zombie.ts" />
+///<reference path="../scenes/spaceship.ts" />

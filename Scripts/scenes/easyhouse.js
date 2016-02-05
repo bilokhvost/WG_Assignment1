@@ -3,21 +3,21 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// MEETING SCENE
+// EASYHOUSE SCENE
 var scenes;
 (function (scenes) {
-    var Meeting = (function (_super) {
-        __extends(Meeting, _super);
+    var EasyHouse = (function (_super) {
+        __extends(EasyHouse, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Meeting() {
+        function EasyHouse() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Meeting.prototype.start = function () {
+        EasyHouse.prototype.start = function () {
             // add Intro Image
-            this._meetingImage = new createjs.Bitmap("../../Assets/images/meeting.png");
-            this.addChild(this._meetingImage);
+            this._easyHouseImage = new createjs.Bitmap("../../Assets/images/house.png");
+            this.addChild(this._easyHouseImage);
             // add the Yes button to the MENU scene
             this._yes = new objects.Button("yes", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._yes);
@@ -32,23 +32,23 @@ var scenes;
             stage.addChild(this);
         };
         // INTRO Scene updates here
-        Meeting.prototype.update = function () {
+        EasyHouse.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // LEFT_CAVE Button click event handler
-        Meeting.prototype._yesClick = function (event) {
+        EasyHouse.prototype._yesClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.VILLAGE;
+            scene = config.Scene.HAPPYEND;
             changeScene();
         };
         // LEFT_CAVE Button click event handler
-        Meeting.prototype._noClick = function (event) {
+        EasyHouse.prototype._noClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.EASYHOUSE;
+            scene = config.Scene.DISEASE;
             changeScene();
         };
-        return Meeting;
+        return EasyHouse;
     })(objects.Scene);
-    scenes.Meeting = Meeting;
+    scenes.EasyHouse = EasyHouse;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=meeting.js.map
+//# sourceMappingURL=easyhouse.js.map

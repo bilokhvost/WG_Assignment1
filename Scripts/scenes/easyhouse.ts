@@ -1,8 +1,8 @@
-    // MEETING SCENE
+// EASYHOUSE SCENE
 module scenes {
-    export class Meeting extends objects.Scene {
+    export class EasyHouse extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _meetingImage: createjs.Bitmap;
+        private _easyHouseImage: createjs.Bitmap;
         private _yes: objects.Button;
         private _no: objects.Button;
         
@@ -16,8 +16,8 @@ module scenes {
         // Start Method
         public start(): void {
             // add Intro Image
-            this._meetingImage = new createjs.Bitmap("../../Assets/images/meeting.png");
-            this.addChild(this._meetingImage);
+            this._easyHouseImage = new createjs.Bitmap("../../Assets/images/house.png");
+            this.addChild(this._easyHouseImage);
             
             // add the Yes button to the MENU scene
             this._yes = new objects.Button(
@@ -54,14 +54,14 @@ module scenes {
         // LEFT_CAVE Button click event handler
         private _yesClick(event: createjs.MouseEvent) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.VILLAGE;
+            scene = config.Scene.HAPPYEND;
             changeScene();
         }
         
         // LEFT_CAVE Button click event handler
         private _noClick(event: createjs.MouseEvent) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.EASYHOUSE;
+            scene = config.Scene.DISEASE;
             changeScene();
         }
     }
