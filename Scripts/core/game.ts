@@ -22,7 +22,8 @@ var village: scenes.Village;
 var easyHouse:scenes.EasyHouse;
 var zombie: scenes.Zombie;
 var spaceship: scenes.Spaceship;
-
+var happyEnd: scenes.HappyEnd;
+var disease: scenes.Disease;
 
 function init(): void {
 // create a reference the HTML canvas Element
@@ -180,7 +181,24 @@ function changeScene(): void {
             spaceship = new scenes.Spaceship();
             currentScene = spaceship;
             console.log("Starting Spaceship Scene");
-            break;         
+            break;
+            
+        case config.Scene.HAPPYEND:  
+             // show the game Spaceship scene
+            stage.removeAllChildren();
+            happyEnd = new scenes.HappyEnd();
+            currentScene = happyEnd;
+            console.log("Starting Happy End Scene");
+            break;    
+
+        case config.Scene.DISEASE:  
+             // show the game Spaceship scene
+            stage.removeAllChildren();
+            disease = new scenes.Disease();
+            currentScene = disease;
+            console.log("Starting Disease Scene");
+            break;    
+                          
             
 }
 

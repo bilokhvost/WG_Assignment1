@@ -19,6 +19,8 @@ var village;
 var easyHouse;
 var zombie;
 var spaceship;
+var happyEnd;
+var disease;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -150,6 +152,20 @@ function changeScene() {
             spaceship = new scenes.Spaceship();
             currentScene = spaceship;
             console.log("Starting Spaceship Scene");
+            break;
+        case config.Scene.HAPPYEND:
+            // show the game Spaceship scene
+            stage.removeAllChildren();
+            happyEnd = new scenes.HappyEnd();
+            currentScene = happyEnd;
+            console.log("Starting Happy End Scene");
+            break;
+        case config.Scene.DISEASE:
+            // show the game Spaceship scene
+            stage.removeAllChildren();
+            disease = new scenes.Disease();
+            currentScene = disease;
+            console.log("Starting Disease Scene");
             break;
     }
     console.log(currentScene.numChildren);

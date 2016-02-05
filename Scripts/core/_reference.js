@@ -15,5 +15,7 @@
 ///<reference path="../scenes/village.ts" />
 ///<reference path="../scenes/easyhouse.ts" />
 ///<reference path="../scenes/zombie.ts" />
-///<reference path="../scenes/spaceship.ts" /> 
+///<reference path="../scenes/spaceship.ts" />
+///<reference path="../scenes/happyend.ts" />
+///<reference path="../scenes/disease.ts" /> 
 //# sourceMappingURL=_reference.js.map
