@@ -1,4 +1,4 @@
-// LEFT_CAVE SCENE
+// FOREST SCENE
 module scenes {
     export class Forest extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
@@ -54,14 +54,14 @@ module scenes {
         // LEFT_CAVE Button click event handler
         private _yesClick(event: createjs.MouseEvent) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.FOREST;
+            scene = config.Scene.LAKE;
             changeScene();
         }
         
         // LEFT_CAVE Button click event handler
         private _noClick(event: createjs.MouseEvent) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.MEETING;
+            scene = config.Scene.HOUSE;
             changeScene();
         }
     }

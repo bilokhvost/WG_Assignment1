@@ -12,6 +12,15 @@ var scene: number;
 var intro: scenes.Intro;
 var forest: scenes.Forest;
 var meeting: scenes.Meeting;
+var lake:scenes.Lake;
+var house:scenes.House;
+var sword:scenes.Sword;
+var fire: scenes.Fire;
+var beauty: scenes.Beauty;
+var witch: scenes.Witch;
+
+
+
 
 function init(): void {
 // create a reference the HTML canvas Element
@@ -68,26 +77,77 @@ function changeScene(): void {
     // Launch various scenes
     switch (scene) {
         case config.Scene.INTRO:
-            // show the MENU scene
+            // show the INTRO scene
             stage.removeAllChildren();
             intro = new scenes.Intro();
             currentScene = intro;
             console.log("Starting INTRO Scene");
             break;
-             case config.Scene.FOREST:
-            // show the PLAY scene
+            
+       case config.Scene.FOREST:
+            // show the FOREST scene
             stage.removeAllChildren();
             forest = new scenes.Forest();
             currentScene = forest;
             console.log("Starting forest Scene");
             break;
+            
         case config.Scene.MEETING:
-            // show the game OVER scene
+            // show the MEETING scene
             stage.removeAllChildren();
             meeting = new scenes.Meeting();
             currentScene = meeting;
             console.log("Starting meeting Scene");
             break;
+            
+        case config.Scene.LAKE:
+            // show the game LAKE scene
+            stage.removeAllChildren();
+            lake = new scenes.Lake();
+            currentScene = lake;
+            console.log("Starting lake Scene");
+            break;
+            
+        case config.Scene.HOUSE:
+             // show the game HOUSE scene
+            stage.removeAllChildren();
+            house = new scenes.House();
+            currentScene = house;
+            console.log("Starting house Scene");
+            break;
+            
+        case config.Scene.SWORD:  
+             // show the game SWORD scene
+            stage.removeAllChildren();
+            sword = new scenes.Sword();
+            currentScene = sword;
+            console.log("Starting sword Scene");
+            break;
+            
+        case config.Scene.FIRE:  
+             // show the game FIRE scene
+            stage.removeAllChildren();
+            fire = new scenes.Fire();
+            currentScene = fire;
+            console.log("Starting fire Scene");
+            break;
+            
+        case config.Scene.BEAUTY:  
+             // show the game Beauty scene
+            stage.removeAllChildren();
+            beauty = new scenes.Beauty();
+            currentScene = beauty;
+            console.log("Starting beauty Scene");
+            break;
+ 
+         case config.Scene.WITCH:  
+             // show the game Beauty scene
+            stage.removeAllChildren();
+            witch = new scenes.Witch();
+            currentScene = witch;
+            console.log("Starting witch Scene");
+            break;           
+            
 }
 
     console.log(currentScene.numChildren);

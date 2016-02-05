@@ -1,8 +1,8 @@
-// LAKE SCENE
+// FOREST SCENE
 module scenes {
-    export class Lake extends objects.Scene {
+    export class House extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-         private _lakeImage: createjs.Bitmap;
+         private _houseImage: createjs.Bitmap;
         private _yes: createjs.Bitmap;
         private _no: objects.Button;
         
@@ -16,8 +16,8 @@ module scenes {
         // Start Method
         public start(): void {
             // add Forest Image
-            this._lakeImage = new createjs.Bitmap("../../Assets/images/lake.png");
-            this.addChild(this._lakeImage);
+            this._houseImage = new createjs.Bitmap("../../Assets/images/scaryHouse.png");
+            this.addChild(this._houseImage);
 
            // add the Yes button to the MENU scene
             this._yes = new objects.Button(
@@ -53,15 +53,15 @@ module scenes {
         
         // LEFT_CAVE Button click event handler
         private _yesClick(event: createjs.MouseEvent) {
-            // Switch to the SWORD Scene
-            scene = config.Scene.SWORD;
+            // Switch to the LEFT_CAVE Scene
+            scene = config.Scene.BEAUTY;
             changeScene();
         }
         
         // LEFT_CAVE Button click event handler
         private _noClick(event: createjs.MouseEvent) {
-            // Switch to the FIRE Scene
-            scene = config.Scene.MEETING;
+            // Switch to the LEFT_CAVE Scene
+            scene = config.Scene.WITCH;
             changeScene();
         }
     }

@@ -7,6 +7,12 @@ var config;
         Scene.INTRO = 0;
         Scene.FOREST = 1;
         Scene.MEETING = 2;
+        Scene.LAKE = 3;
+        Scene.HOUSE = 4;
+        Scene.SWORD = 5;
+        Scene.FIRE = 6;
+        Scene.BEAUTY = 7;
+        Scene.WITCH = 8;
         return Scene;
     })();
     config.Scene = Scene;
@@ -15,7 +21,7 @@ var config;
         function Screen() {
         }
         Screen.WIDTH = 640;
-        Screen.HEIGHT = 480;
+        Screen.HEIGHT = 440;
         Screen.CENTER_X = 320;
         Screen.CENTER_Y = 240;
         return Screen;

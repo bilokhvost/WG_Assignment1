@@ -6,18 +6,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 // FOREST SCENE
 var scenes;
 (function (scenes) {
-    var Forest = (function (_super) {
-        __extends(Forest, _super);
+    var House = (function (_super) {
+        __extends(House, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Forest() {
+        function House() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Forest.prototype.start = function () {
+        House.prototype.start = function () {
             // add Forest Image
-            this._forestImage = new createjs.Bitmap("../../Assets/images/forest.png");
-            this.addChild(this._forestImage);
+            this._houseImage = new createjs.Bitmap("../../Assets/images/scaryHouse.png");
+            this.addChild(this._houseImage);
             // add the Yes button to the MENU scene
             this._yes = new objects.Button("yes", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._yes);
@@ -32,23 +32,23 @@ var scenes;
             stage.addChild(this);
         };
         // INTRO Scene updates here
-        Forest.prototype.update = function () {
+        House.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // LEFT_CAVE Button click event handler
-        Forest.prototype._yesClick = function (event) {
+        House.prototype._yesClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.LAKE;
+            scene = config.Scene.BEAUTY;
             changeScene();
         };
         // LEFT_CAVE Button click event handler
-        Forest.prototype._noClick = function (event) {
+        House.prototype._noClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.HOUSE;
+            scene = config.Scene.WITCH;
             changeScene();
         };
-        return Forest;
+        return House;
     })(objects.Scene);
-    scenes.Forest = Forest;
+    scenes.House = House;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=forest.js.map
+//# sourceMappingURL=house.js.map
