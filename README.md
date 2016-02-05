@@ -1,3 +1,3 @@
-# COMP397-W2016-StateMachine
+# COMP397-Assignment 1
 
-COMP397 State Machine Template for Web Game Programming @ Centennial
+COMP397 Assignment 1 @ Centennial

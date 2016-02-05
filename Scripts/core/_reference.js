@@ -2,5 +2,8 @@
 /// <reference path="../config/config.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/button.ts" />
-/// <reference path="../states/menu.ts" /> 
+/// <reference path="../objects/scene.ts" />
+/// <reference path="../scenes/intro.ts" />
+///<reference path="../scenes/forest.ts" />
+///<reference path="../scenes/meeting.ts" /> 
 //# sourceMappingURL=_reference.js.map
