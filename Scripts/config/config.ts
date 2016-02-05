@@ -1,4 +1,14 @@
-﻿ module config {
+﻿ /*
+ Kateryna Bilokhvost
+ Last modified by:Kateryna Bilokhvost
+ Last Modified date: February 5, 2016
+ Description: Yes-No game on the basis of The Sleeping Beauty Tale
+ Revision History:
+  Commit 1: Initial Commit
+  Commit 2-6: Scenes were added
+  Commit 7: Background to screen was added
+ */
+ module config {
  // Scene Constants
     export class Scene {
         public static INTRO: number = 0;
@@ -23,9 +33,9 @@
     // Screen Constants
     export class Screen {
         public static WIDTH: number = 640;
-        public static HEIGHT: number = 440;
+        public static HEIGHT: number = 360;
         public static CENTER_X: number = 320;
-        public static CENTER_Y: number = 240;
+        public static CENTER_Y: number = 180;
     }
     
     // Game Constants

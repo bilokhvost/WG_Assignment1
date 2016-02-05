@@ -1,3 +1,13 @@
+/*
+Kateryna Bilokhvost
+Last modified by:Kateryna Bilokhvost
+Last Modified date: February 5, 2016
+Description: Yes-No game on the basis of The Sleeping Beauty Tale
+Revision History:
+ Commit 1: Initial Commit
+ Commit 2-6: Scenes were added
+ Commit 7: Background to screen was added
+*/
 /// <reference path = "_reference.ts" />
 // global variables
 var canvas;

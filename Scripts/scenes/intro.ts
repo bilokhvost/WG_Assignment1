@@ -1,3 +1,13 @@
+ /*
+ Kateryna Bilokhvost
+ Last modified by:Kateryna Bilokhvost
+ Last Modified date: February 5, 2016
+ Description: Yes-No game on the basis of The Sleeping Beauty Tale
+ Revision History:
+  Commit 1: Initial Commit
+  Commit 2-6: Scenes were added
+  Commit 7: Background to screen was added
+ */
 // INTRO SCENE
 module scenes {
     export class Intro extends objects.Scene {
@@ -22,7 +32,7 @@ module scenes {
            this._start = new objects.Button(
                 "StartButton",
                 config.Screen.CENTER_X,
-                config.Screen.CENTER_Y + 180);
+                config.Screen.CENTER_Y + 130);
             this.addChild(this._start);
            
             // START_OVER Button event listener

@@ -1,3 +1,13 @@
+ /*
+ Kateryna Bilokhvost
+ Last modified by:Kateryna Bilokhvost
+ Last Modified date: February 5, 2016
+ Description: Yes-No game on the basis of The Sleeping Beauty Tale
+ Revision History:
+  Commit 1: Initial Commit
+  Commit 2-6: Scenes were added
+  Commit 7: Background to screen was added
+ */
 // FOREST SCENE
 module scenes {
     export class House extends objects.Scene {
@@ -22,8 +32,8 @@ module scenes {
            // add the Yes button to the MENU scene
             this._yes = new objects.Button(
                 "yes",
-                config.Screen.CENTER_X - 100,
-                config.Screen.CENTER_Y + 180);
+                config.Screen.CENTER_X - 60,
+                config.Screen.CENTER_Y + 120);
             this.addChild(this._yes);
             
             // Yes Button event listener
@@ -32,8 +42,8 @@ module scenes {
             // add the No button to the MENU scene
             this._no = new objects.Button(
                 "no",
-                config.Screen.CENTER_X + 100,
-                config.Screen.CENTER_Y + 180);
+                config.Screen.CENTER_X + 130,
+                config.Screen.CENTER_Y + 120);
             this.addChild(this._no);
             
             // No Button event listener
@@ -51,14 +61,14 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // LEFT_CAVE Button click event handler
+        // YES Button click event handler
         private _yesClick(event: createjs.MouseEvent) {
             // Switch to the LEFT_CAVE Scene
             scene = config.Scene.BEAUTY;
             changeScene();
         }
         
-        // LEFT_CAVE Button click event handler
+        //NO Button click event handler
         private _noClick(event: createjs.MouseEvent) {
             // Switch to the LEFT_CAVE Scene
             scene = config.Scene.WITCH;
