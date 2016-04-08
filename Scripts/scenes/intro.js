@@ -10,8 +10,8 @@ Last Modified date: February 5, 2016
 Description: Yes-No game on the basis of The Sleeping Beauty Tale
 Revision History:
  Commit 1: Initial Commit
- Commit 2-6: Scenes were added
- Commit 7: Background to screen was added
+ Commit 2-9: Logic was added
+ Commit 10-11: Design fixes
 */
 // INTRO SCENE
 var scenes;

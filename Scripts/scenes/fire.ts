@@ -30,7 +30,7 @@ module scenes {
 
            // add the BACK button to the OVER scene
             this._startOverButton = new objects.Button(
-                "StartOverButton",
+                "RestartButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 130);
             this.addChild(this._startOverButton);

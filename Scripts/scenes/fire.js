@@ -29,7 +29,7 @@ var scenes;
             this._fireImage = new createjs.Bitmap("../../Assets/images/fire.png");
             this.addChild(this._fireImage);
             // add the BACK button to the OVER scene
-            this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 130);
+            this._startOverButton = new objects.Button("RestartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 130);
             this.addChild(this._startOverButton);
             // START_OVER Button event listener
             this._startOverButton.on("click", this._startOverButtonClick, this);
